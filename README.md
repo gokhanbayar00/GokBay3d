@@ -1,19 +1,27 @@
-# :earth_americas: GDP dashboard template
+# GökBay3D
 
-A simple Streamlit app showing the GDP of different countries in the world.
+Bu proje, metin veya resim girdisinden basit bir **STL** 3B model oluşturan bir **Streamlit** uygulamasıdır.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://gdp-dashboard-template.streamlit.app/)
+## Çalıştırma
 
-### How to run it on your own machine
+1. Sanal ortam oluşturun ve aktif edin.
+2. Gerekli paketleri yükleyin:
 
-1. Install the requirements
+```bash
+pip install streamlit trimesh numpy pillow opencv-python requests
+```
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+3. Uygulamayı çalıştırın:
 
-2. Run the app
+```bash
+streamlit run ana_uygulama.py
+```
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+> **Not:** MiDaS derinlik tahmini için ilk çalıştırmada model dosyası internetten indirilecektir. İndirme başarısız olursa, uygulama basit gri tonlama derinliği üretir.
+
+## Klasör Yapısı
+
+- `ana_uygulama.py`: Uygulamanın giriş noktası.
+- `moduller/`: Görüntü işleme ve 3B dönüştürme modülleri.
+- `cikti_modelleri/`: Oluşturulan STL dosyalarının kaydedildiği yer.
+- `arayuz_ayarlari/`: Arayüz için ek ayarların saklanabileceği klasör.
